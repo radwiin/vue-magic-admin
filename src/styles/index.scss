@@ -1,0 +1,63 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: block;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e4eaf5;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c4c9d3;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+a:focus,
+a:active,
+button:active,
+div:focus,
+span:focus {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-container {
+  height: 100%;
+  position: relative;
+}
+
