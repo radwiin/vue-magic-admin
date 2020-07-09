@@ -51,7 +51,7 @@
         <vs-button>Get Started</vs-button>
       </template>
     </vs-navbar>
-    <div id="padding-scroll-content" class="square">
+    <div class="square">
       <div class="child">
         child 1
       </div>
