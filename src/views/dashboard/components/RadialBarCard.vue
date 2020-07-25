@@ -22,13 +22,13 @@ export default {
           show: false
         },
         sparkline: {
-          enabled: true // 启动迷你画模式
+          enabled: false // 启动迷你画模式
         }
       },
       plotOptions: {
         radialBar: {
           startAngle: -135,
-          endAngle: 225,
+          endAngle: 135,
           hollow: {
             margin: 0,
             size: '70%',
