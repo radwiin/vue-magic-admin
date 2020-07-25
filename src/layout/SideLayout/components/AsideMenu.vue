@@ -119,7 +119,7 @@
       Chat
     </vs-sidebar-item>
     <template #footer>
-      <vs-row justify="space-between">
+      <vs-row justify="space-between" style="padding: 0 3px">
         <vs-avatar badge-color="danger" badge-position="top-right">
           <i class="bx bx-bell"></i>
 

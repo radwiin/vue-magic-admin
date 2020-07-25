@@ -1,5 +1,5 @@
 <template>
-  <ra-card :body-style="{ padding: '0px' }">
+  <ra-card noBodyPadding>
     <div class="header-wrapper">
       <div>
         <h2>92.6k</h2>

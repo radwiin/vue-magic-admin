@@ -1,5 +1,5 @@
 <template>
-  <ra-card :body-style="{ padding: '0px' }">
+  <ra-card noBodyPadding>
     <div class="header-wrapper">
       <span class="icon-container">
         <svg-icon class="icon" icon-class="vue" class-name="vue" />
