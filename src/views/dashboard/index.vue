@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 0px 30px">
+  <div>
     <div style="margin: 0 0 10px 0">
       <ra-card style="width:400px" header="Title">
         <p style="margin: 0 0 0.6rem 0">

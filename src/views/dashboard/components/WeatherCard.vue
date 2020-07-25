@@ -1,5 +1,9 @@
 <template>
-  <ra-card class="card-wrapper" :body-style="{ padding: '1.5rem', background: 'rgba(0,0,0,.6)' }">
+  <ra-card
+    class="card-wrapper"
+    :cardBackground="`url(${require('@/assets/cloudy.jpg')}) center center/cover`"
+    :body-style="{ padding: '1.5rem', background: 'rgba(0,0,0,.6)' }"
+  >
     <div class="row-1">
       <h3>Cloudy</h3>
       <p>NanJing</p>
@@ -36,7 +40,6 @@ export default {
 
 .card-wrapper {
   border-radius: 10px;
-  background: url('~@/assets/cloudy.jpg') center center/cover;
   color: #fff;
 
   .row-1 {

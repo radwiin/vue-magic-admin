@@ -31,7 +31,7 @@ export default {
     position: relative;
 
     .router {
-      padding-top: 100px;
+      padding: 100px 30px 0;
     }
   }
 }
