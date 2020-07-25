@@ -1,53 +1,5 @@
-@font-face {
-  font-family: Poppins;
-  src: url(/Poppins/Poppins-Regular.ttf);
-  font-weight: 400;
-  font-style: normal
-}
-
-:root {
-  --vs-primary: 26,92,255;
-  --vs-theme-bg: #f4f7f8;
-  --vs-theme-color: #2c3e50;
-  --vs-theme-layout: #fff;
-  --vs-theme-bg2: #eef2f5;
-  --vs-theme-code: #3f3d56;
-  --vs-theme-code2: #363449;
-}
-
-[vs-theme=dark] {
-  --vs-theme-bg: #18191c;
-  --vs-theme-color: #fff;
-  --vs-theme-layout: #1e2023;
-  --vs-theme-bg2: #141417;
-  --vs-theme-code: #141417;
-  --vs-theme-code2: #161619;
-}
-
-[vs-theme=dark] {
-  --vs-background: 30,32,35;
-  --vs-text: 255,255,255;
-  --vs-gray-1: 24,25,28;
-  --vs-gray-2: 20,20,23;
-  --vs-gray-3: 15,16,19;
-  --vs-gray-4: 10,11,14;
-  --vs-shadow-opacity: .3;
-  --vs-dark: 0,0,0;
-  --vs-background-opacity: .6;
-}
-
-body, button, input {
-  font-family: Poppins,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-}
-
-html, body, #app {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-}
+@import './fonts.scss';
+@import './vars.scss';
 
 *,
 *:before,
@@ -55,16 +7,27 @@ html, body, #app {
   box-sizing: inherit;
 }
 
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--vs-theme-bg);
+  font-family: "Poppins", "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   display: block;
   background: var(--vs-theme-layout);
-}
 
-::-webkit-scrollbar-thumb {
-  background: var(--vs-theme-color);
-  border-radius: 5px;
+  &-thumb {
+    background: var(--vs-theme-color);
+    border-radius: 5px;
+  }
 }
 
 ::selection {
@@ -90,9 +53,3 @@ a:hover {
 img {
   vertical-align: bottom;
 }
-
-.page-container {
-  height: 100%;
-  position: relative;
-}
-

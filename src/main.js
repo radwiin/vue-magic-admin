@@ -4,12 +4,11 @@ import router from './router'
 import store from './store'
 import Vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css' //Vuesax styles
+import './icons' // load icons
+import './styles/index.scss' // global styles
+import './components' // global components
 
-import '@/styles/index.scss'
-
-Vue.use(Vuesax, {
-  // options here
-})
+Vue.use(Vuesax)
 
 Vue.config.productionTip = false
 

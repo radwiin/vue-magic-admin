@@ -16,6 +16,7 @@
     "lodash": "^4.17.15",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
+    "perfect-scrollbar": "^1.5.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuesax": "^4.0.1-alpha.22",

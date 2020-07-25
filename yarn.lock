@@ -6015,6 +6015,11 @@ pbkdf2@^3.0.3:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+perfect-scrollbar@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/perfect-scrollbar/-/perfect-scrollbar-1.5.0.tgz#821d224ed8ff61990c23f26db63048cdc75b6b83"
+  integrity sha512-NrNHJn5mUGupSiheBTy6x+6SXCFbLlm8fVZh9moIzw/LgqElN5q4ncR4pbCBCYuCJ8Kcl9mYM0NgDxvW+b4LxA==
+
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
@@ -8251,9 +8256,9 @@ vue@^2.6.11:
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
 vuesax@^4.0.1-alpha.22:
-  version "4.0.1-alpha.22"
-  resolved "https://registry.yarnpkg.com/vuesax/-/vuesax-4.0.1-alpha.22.tgz#672252a033e61909e7387d7402020f2904405a19"
-  integrity sha512-IqAuuV9SAi2RUYkUT+o/+qDVHx5lD+1h48/BYZXgTOKLO7erXiBYEc3+WKLJpUtmTwrpOhSI6qIyNM0keK9hrw==
+  version "4.0.1-alpha.23"
+  resolved "https://registry.yarnpkg.com/vuesax/-/vuesax-4.0.1-alpha.23.tgz#b015e811837adac5c930d41aa48f1caf00655e1d"
+  integrity sha512-a1WqyYodcMiX9hXNj58GIR1AoNX0eQbGCFYq4n/mYvXbcS8PVyJsnxyswLbQMx23tOvfjtreh79mi4DC+qAIMA==
   dependencies:
     vue-router "^3.3.4"
 
