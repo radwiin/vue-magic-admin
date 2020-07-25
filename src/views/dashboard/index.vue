@@ -12,6 +12,9 @@
       </ra-card>
     </div>
     <div style="margin: 10px 0">
+      <radial-bar-card style="width:400px"></radial-bar-card>
+    </div>
+    <div style="margin: 10px 0">
       <weather-card style="width:400px"></weather-card>
     </div>
     <div style="margin: 10px 0">
@@ -36,6 +39,7 @@ import RectCard from './components/RectCard'
 import AreaCard from './components/AreaCard'
 import LineCard from './components/LineCard'
 import WeatherCard from './components/WeatherCard'
+import RadialBarCard from './components/RadialBarCard'
 
 export default {
   name: 'dashboard',
@@ -45,7 +49,8 @@ export default {
     RectCard,
     AreaCard,
     LineCard,
-    WeatherCard
+    WeatherCard,
+    RadialBarCard
   },
   data: () => ({
     active: 'home'
