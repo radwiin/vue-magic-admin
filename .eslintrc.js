@@ -24,6 +24,7 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 'off' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'vue/no-unused-components': 'off', // 关闭未使用组件验证
-    'no-unused-vars': 'off' // 关闭未使用变量验证
+    'no-unused-vars': 'off', // 关闭未使用变量验证
+    'no-unreachable': 'off' // 关闭为到达验证
   }
 }
