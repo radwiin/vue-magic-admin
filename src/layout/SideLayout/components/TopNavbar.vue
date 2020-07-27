@@ -2,10 +2,10 @@
   <header class="top-navbar-wrapper">
     <vs-navbar shadow class="top-navbar">
       <template #left>
-        <i class="bx bx-grid-alt" style="font-size:21px;padding:7px"></i>
-        <i class="bx bxs-music" style="font-size:21px;padding:7px"></i>
-        <i class="bx bxl-instagram" style="font-size:21px;padding:7px"></i>
-        <i class="bx bxl-twitter" style="font-size:21px;padding:7px"></i>
+        <i class="bx bx-grid-alt"></i>
+        <i class="bx bxs-music"></i>
+        <i class="bx bxl-instagram"></i>
+        <i class="bx bxl-twitter"></i>
       </template>
       <template #right>
         <vs-button flat>Login</vs-button>
@@ -22,6 +22,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+i {
+  font-size: 21px;
+  padding: 7px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    padding-bottom: 15px;
+    opacity: 1;
+  }
+}
 .top-navbar-wrapper {
   position: absolute;
   z-index: 9000;

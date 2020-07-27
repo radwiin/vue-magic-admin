@@ -1,12 +1,13 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import App from '@/App.vue'
+import router from '@/router'
+import store from '@/store'
 import Vuesax from 'vuesax'
 import 'vuesax/dist/vuesax.css' //Vuesax styles
-import './icons' // load icons
-import './styles/index.scss' // global styles
-import './components' // global components
+import '@/icons' // load icons
+import '@/permission'
+import '@/styles/index.scss' // global styles
+import '@/components' // global components
 
 Vue.use(Vuesax)
 

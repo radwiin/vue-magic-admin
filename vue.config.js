@@ -19,6 +19,10 @@ module.exports = {
     // when there are many pages, it will cause too many meaningless requests
     config.plugins.delete('prefetch')
 
+    // set mock
+    const entry = config.entry('app')
+    entry.add('@/mock').end()
+
     // set svg-sprite-loader
     config.module
       .rule('svg')

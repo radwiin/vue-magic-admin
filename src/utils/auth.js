@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
 
-const TokenKey = 'EXIA_TOKEN'
+const TokenKey = 'TOKEN'
 
 export function getToken() {
   return Cookies.get(TokenKey)

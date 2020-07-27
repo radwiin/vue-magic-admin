@@ -8,7 +8,7 @@ import jexl from 'jexl'
  * @returns { Number }
  */
 function accAdd(arg1, arg2) {
-  var r1, r2, m
+  let r1, r2, m
   try {
     r1 = arg1.toString().split('.')[1].length
   } catch (e) {
@@ -30,7 +30,7 @@ function accAdd(arg1, arg2) {
  * @returns { Number }
  */
 function accSub(arg1, arg2) {
-  var r1, r2, m, n
+  let r1, r2, m, n
   try {
     r1 = arg1.toString().split('.')[1].length
   } catch (e) {
@@ -54,7 +54,7 @@ function accSub(arg1, arg2) {
  * @returns { Number }
  */
 function accMul(arg1, arg2) {
-  var m = 0,
+  let m = 0,
     s1 = arg1.toString(),
     s2 = arg2.toString()
   try {
@@ -77,7 +77,7 @@ function accMul(arg1, arg2) {
  * @returns { Number }
  */
 function accDiv(arg1, arg2) {
-  var t1 = 0,
+  let t1 = 0,
     t2 = 0,
     r1,
     r2
