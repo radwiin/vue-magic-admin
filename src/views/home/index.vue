@@ -42,7 +42,7 @@ import WeatherCard from './components/WeatherCard'
 import RadialBarCard from './components/RadialBarCard'
 
 export default {
-  name: 'dashboard',
+  name: 'home',
   components: {
     RaCard,
     CubeCard,

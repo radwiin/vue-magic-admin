@@ -10,7 +10,7 @@ export default {
       default: () => [
         {
           id: 'home',
-          to: '/dashboard',
+          to: '/home',
           icon: 'bx bx-home',
           text: 'Home'
         },

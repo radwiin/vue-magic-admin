@@ -30,21 +30,22 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    name: 'login',
     path: '/login',
     component: () => import('@/views/login'),
-    name: 'login',
     meta: { title: 'Login', hidden: true, noToken: true }
   },
   {
+    name: '/',
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/home',
     children: [
       {
-        name: 'dashboard',
-        path: 'dashboard',
-        component: () => import('@/views/dashboard'),
-        meta: { title: 'Home', icon: 'dashboard' }
+        name: 'home',
+        path: '/home',
+        component: () => import('@/views/home'),
+        meta: { title: 'Home', icon: 'bx bx-home' }
       }
     ]
   }
