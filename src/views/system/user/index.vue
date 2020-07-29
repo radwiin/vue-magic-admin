@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <ps-container>
     user
-  </div>
+    <div style="height:5000px;background:red"></div>
+  </ps-container>
 </template>
 
 <script>

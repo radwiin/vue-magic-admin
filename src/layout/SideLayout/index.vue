@@ -4,7 +4,9 @@
     <div class="main">
       <top-navbar></top-navbar>
       <ps-container class="router-container" ref="router-container">
-        <router-view />
+        <transition name="fade-transform" mode="out-in">
+          <router-view />
+        </transition>
       </ps-container>
     </div>
   </div>
