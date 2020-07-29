@@ -37,6 +37,12 @@ const routes = [
     meta: { title: 'Login', hidden: true, noToken: true }
   },
   {
+    name: '404',
+    path: '/404',
+    component: () => import('@/views/404'),
+    meta: { title: '404', hidden: true, noToken: true }
+  },
+  {
     name: '/',
     path: '/',
     component: Layout,
@@ -56,9 +62,10 @@ const route_404 = { path: '*', redirect: '/404', meta: { hidden: true } }
 
 export function generateRoutes(menus) {
   const asyncRoutes = generateAsyncRoutes(menus)
+  asyncRoutes.push(route_404)
   return {
     asyncRoutes, // 传入的menus参数所转化出来的异步路由
-    routes: [...routes, ...asyncRoutes, route_404] // 异步路由与基本路由以及404路由拼接的最终实际项目使用的路由
+    routes: [...routes, ...asyncRoutes] // 异步路由与基本路由以及404路由拼接的最终实际项目使用的路由
   }
 }
 
