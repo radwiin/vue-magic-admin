@@ -1,5 +1,8 @@
 # vue-magic-admin
 
+## The Project is under development
+More detail See [Trello](https://trello.com/b/12CehpJ6/vue-magic-admin).
+
 ## Project setup
 ```
 yarn install
