@@ -3,7 +3,7 @@
     <aside-menu />
     <div class="main">
       <top-navbar></top-navbar>
-      <ps-container class="router">
+      <ps-container class="router-container" ref="router-container">
         <router-view />
       </ps-container>
     </div>
@@ -16,7 +16,14 @@ import TopNavbar from './components/TopNavbar'
 export default {
   name: 'SideLayout',
   components: { AsideMenu, TopNavbar },
-  data: () => ({})
+  data: () => ({}),
+  watch: {
+    $route() {
+      if (this.$refs['router-container']) {
+        this.$refs['router-container'].$_ps_scrollTop()
+      }
+    }
+  }
 }
 </script>
 
@@ -30,7 +37,7 @@ export default {
     margin-left: 50px;
     position: relative;
 
-    .router {
+    .router-container {
       padding: 100px 30px 0;
     }
   }
