@@ -31,9 +31,11 @@ export default {
   components: {
     AutoVsSidebar
   },
-  data: () => ({
-    active: 'home'
-  }),
+  data() {
+    return {
+      active: this.$route.name
+    }
+  },
   computed: {
     ...mapGetters(['routes']),
     menus() {
