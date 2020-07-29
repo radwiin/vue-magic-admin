@@ -4,7 +4,7 @@ const menus = [
     path: '/component',
     component: 'Layout',
     redirect: '/component/card',
-    meta: { title: 'Component', icon: 'bx bx-code-alt' },
+    meta: { title: 'Component', icon: 'bx bx-code-alt', alwaysShow: true },
     children: [
       {
         name: 'card',

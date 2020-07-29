@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Layout from '@/layout'
 import { mapTree } from '@/utils'
+import _ from 'lodash'
 
 Vue.use(VueRouter)
 
@@ -62,7 +63,7 @@ export function generateRoutes(menus) {
 }
 
 function generateAsyncRoutes(menus) {
-  return mapTree(menus, item => {
+  return mapTree(_.cloneDeep(menus), item => {
     if (!item.component || item.component.length === 0) {
       delete item.component
     } else if (item.component === 'Layout') {
