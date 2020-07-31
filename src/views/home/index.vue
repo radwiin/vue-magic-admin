@@ -12,32 +12,16 @@
       </ra-card>
     </div>
     <div style="margin: 10px 0">
-      <radial-bar-card style="width:400px"></radial-bar-card>
+      <!-- <radial-bar-card style="width:400px"></radial-bar-card> -->
     </div>
     <div style="margin: 10px 0">
       <weather-card style="width:400px"></weather-card>
-    </div>
-    <div style="margin: 10px 0">
-      <cube-card style="width:170px"></cube-card>
-    </div>
-    <div style="margin: 10px 0">
-      <rect-card style="width:305px" />
-    </div>
-    <div style="margin: 10px 0">
-      <area-card style="width:305px" />
-    </div>
-    <div style="margin: 10px 0">
-      <line-card style="width:400px" />
     </div>
   </div>
 </template>
 
 <script>
 import RaCard from '@/components/RaCard'
-import CubeCard from './components/CubeCard'
-import RectCard from './components/RectCard'
-import AreaCard from './components/AreaCard'
-import LineCard from './components/LineCard'
 import WeatherCard from './components/WeatherCard'
 import RadialBarCard from './components/RadialBarCard'
 
@@ -45,10 +29,6 @@ export default {
   name: 'home',
   components: {
     RaCard,
-    CubeCard,
-    RectCard,
-    AreaCard,
-    LineCard,
     WeatherCard,
     RadialBarCard
   },
