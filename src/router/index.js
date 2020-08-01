@@ -39,8 +39,32 @@ const routes = [
   {
     name: '404',
     path: '/404',
-    component: () => import('@/views/404'),
+    component: () => import('@/views/error'),
     meta: { title: '404', hidden: true, noToken: true }
+  },
+  {
+    name: '500',
+    path: '/500',
+    component: () => import('@/views/error'),
+    meta: { title: '500', hidden: true, noToken: true }
+  },
+  {
+    name: 'Maintenance',
+    path: '/Maintenance',
+    component: () => import('@/views/error'),
+    meta: { title: 'Maintenance', hidden: true, noToken: true }
+  },
+  {
+    name: 'NotAuthorized',
+    path: '/NotAuthorized',
+    component: () => import('@/views/error'),
+    meta: { title: 'NotAuthorized', hidden: true, noToken: true }
+  },
+  {
+    name: 'comingsoon',
+    path: '/comingsoon',
+    component: () => import('@/views/comingsoon'),
+    meta: { title: 'comingsoon', hidden: true, noToken: true }
   },
   {
     name: '/',
