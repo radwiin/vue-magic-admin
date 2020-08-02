@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <RaCard>
+    <mg-card>
       <div class="box">
         <h1 class="title">We are launching soon</h1>
         <img src="./../../assets/rocket.png" alt="rocket" />
@@ -12,18 +12,13 @@
         </div>
         <vs-button class="btn" @click="handleSubmit">Subscribe</vs-button>
       </div>
-    </RaCard>
+    </mg-card>
   </div>
 </template>
 
 <script>
-import RaCard from '@/components/RaCard'
 export default {
   name: 'index',
-  components: {
-    RaCard
-  },
-  props: {},
   data() {
     return {
       email: ''

@@ -1,7 +1,7 @@
 <template>
-  <ra-card header="RadialBarCard" noBodyPadding>
+  <mg-card header="RadialBarCard" noBodyPadding>
     <apex-chart type="radialBar" height="350" :options="chartOptions" :series="series"></apex-chart>
-  </ra-card>
+  </mg-card>
 </template>
 
 <script>

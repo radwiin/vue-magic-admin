@@ -1,5 +1,5 @@
 <template>
-  <ra-card noBodyPadding>
+  <mg-card noBodyPadding>
     <div class="header-wrapper">
       <div>
         <h2>92.6k</h2>
@@ -10,7 +10,7 @@
       </span>
     </div>
     <apex-chart type="line" height="100" :options="chartOptions" :series="series"></apex-chart>
-  </ra-card>
+  </mg-card>
 </template>
 
 <script>

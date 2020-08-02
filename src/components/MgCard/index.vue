@@ -1,9 +1,9 @@
 <template>
-  <div class="ra-card" :class="`is-${shadow}-shadow`" :style="{ background: cardBackground }">
-    <div class="ra-card__header" v-if="$slots.header || header" :style="{ color: titleColor }">
+  <div class="mg-card" :class="`is-${shadow}-shadow`" :style="{ background: cardBackground }">
+    <div class="mg-card__header" v-if="$slots.header || header" :style="{ color: titleColor }">
       <slot name="header">{{ header }}</slot>
     </div>
-    <div :class="['ra-card__body', { 'no-padding': noBodyPadding }, bodyClass]" :style="bodyStyle">
+    <div :class="['mg-card__body', { 'no-padding': noBodyPadding }, bodyClass]" :style="bodyStyle">
       <slot></slot>
     </div>
   </div>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'RaCard',
+  name: 'MgCard',
   props: {
     header: {},
     bodyClass: {
@@ -32,18 +32,21 @@ export default {
     },
     cardBackground: {
       type: String
+    },
+    block: {
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.ra-card {
+.mg-card {
   border-radius: 0.5rem;
   border: 1px solid #ebeef5;
   background-color: #fff;
   overflow: hidden;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   font-weight: 400;
   line-height: 1.5;

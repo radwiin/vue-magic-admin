@@ -1,7 +1,7 @@
 <template>
   <div>
     <div style="margin: 0 0 10px 0">
-      <ra-card style="width:400px" header="Title">
+      <mg-card style="width:400px" header="Title">
         <p style="margin: 0 0 0.6rem 0">
           You can use title-color prop to change color of title of card. This prop supports hex, rgba, rgb and theme colors.
         </p>
@@ -9,7 +9,7 @@
           Oat cake powder sesame snaps. Chocolate bar dessert bonbon chocolate bar pudding apple pie muffin chocolate ice cream. I love bear claw I
           love.
         </p>
-      </ra-card>
+      </mg-card>
     </div>
     <div style="margin: 10px 0">
       <!-- <radial-bar-card style="width:400px"></radial-bar-card> -->
@@ -21,14 +21,12 @@
 </template>
 
 <script>
-import RaCard from '@/components/RaCard'
 import WeatherCard from './components/WeatherCard'
 import RadialBarCard from './components/RadialBarCard'
 
 export default {
   name: 'home',
   components: {
-    RaCard,
     WeatherCard,
     RadialBarCard
   },

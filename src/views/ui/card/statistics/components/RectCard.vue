@@ -1,5 +1,5 @@
 <template>
-  <ra-card :body-style="{ padding: '1.5rem' }">
+  <mg-card :body-style="{ padding: '1.5rem' }">
     <div class="content-wrapper">
       <div class="text">
         <h2>36.9k</h2>
@@ -9,7 +9,7 @@
         <svg-icon class="icon" icon-class="vue" class-name="vue" />
       </span>
     </div>
-  </ra-card>
+  </mg-card>
 </template>
 
 <script>

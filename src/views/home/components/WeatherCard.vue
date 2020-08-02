@@ -1,5 +1,5 @@
 <template>
-  <ra-card
+  <mg-card
     class="card-wrapper"
     :cardBackground="`url(${require('@/assets/cloudy.jpg')}) center center/cover`"
     :body-style="{ padding: '1.5rem', background: 'rgba(0,0,0,.6)' }"
@@ -9,7 +9,7 @@
       <p>NanJing</p>
     </div>
     <div class="row-2">
-      <svg-icon icon-class="cloudy" class-name="cloudy-icon" />
+      <svg-icon icon-class="bx-cloud" class-name="cloudy-icon" />
       <h2>-6 °</h2>
     </div>
     <div class="row-3">
@@ -24,7 +24,7 @@
       <span>Wind</span>
       <span>4823 km/h</span>
     </div>
-  </ra-card>
+  </mg-card>
 </template>
 
 <script>

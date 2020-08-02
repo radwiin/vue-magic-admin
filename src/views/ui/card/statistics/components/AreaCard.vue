@@ -1,5 +1,5 @@
 <template>
-  <ra-card noBodyPadding>
+  <mg-card noBodyPadding>
     <div class="header-wrapper">
       <span class="icon-container">
         <svg-icon class="icon" icon-class="vue" class-name="vue" />
@@ -8,7 +8,7 @@
       <span>Subscribers Gained</span>
     </div>
     <apex-chart type="area" height="100" :options="chartOptions" :series="series"></apex-chart>
-  </ra-card>
+  </mg-card>
 </template>
 
 <script>
