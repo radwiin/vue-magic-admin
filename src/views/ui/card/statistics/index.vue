@@ -7,18 +7,18 @@
       </vs-col>
     </vs-row>
     <vs-row justify="space-between" style="margin: 0 -0.7rem;width:unset;">
-      <vs-col v-for="i in 4" :key="i" lg="3" sm="6" style="padding: 0 0.7rem 1.4rem">
-        <rect-card />
+      <vs-col v-for="(item, index) in rectCards" :key="index" lg="3" sm="6" style="padding: 0 0.7rem 1.4rem">
+        <rect-card v-bind="item" />
       </vs-col>
     </vs-row>
     <vs-row justify="space-between" style="margin: 0 -0.7rem;width:unset;">
-      <vs-col v-for="i in 4" :key="i" lg="3" sm="6" style="padding: 0 0.7rem 1.4rem">
-        <area-card />
+      <vs-col v-for="(item, index) in areaCards" :key="index" lg="3" sm="6" style="padding: 0 0.7rem 1.4rem">
+        <area-card v-bind="item" />
       </vs-col>
     </vs-row>
     <vs-row justify="space-between" style="margin: 0 -0.7rem;width:unset;">
-      <vs-col v-for="i in 3" :key="i" lg="4" sm="4" style="padding: 0 0.7rem 1.4rem">
-        <line-card />
+      <vs-col v-for="(item, index) in lineCards" :key="index" lg="4" sm="4" style="padding: 0 0.7rem 1.4rem">
+        <line-card v-bind="item" />
       </vs-col>
     </vs-row>
   </div>
@@ -74,6 +74,78 @@ export default {
         color: 'warn',
         value: '2',
         label: 'Returns'
+      }
+    ],
+    rectCards: [
+      {
+        icon: 'bx-chip',
+        color: 'primary',
+        value: '86%',
+        label: 'CPU Usage'
+      },
+      {
+        icon: 'bx-server',
+        color: 'success',
+        value: '1.2gb',
+        label: 'Memory Usage'
+      },
+      {
+        icon: 'bx-pulse',
+        color: 'danger',
+        value: '0.1%',
+        label: 'Downtime Ratio'
+      },
+      {
+        icon: 'bx-error-alt',
+        color: 'warn',
+        value: '13',
+        label: 'Issues Found'
+      }
+    ],
+    areaCards: [
+      {
+        icon: 'bx-group',
+        color: 'primary',
+        value: '92.6k',
+        label: 'Subscribers Gained'
+      },
+      {
+        icon: 'bx-dollar',
+        color: 'success',
+        value: '1.2gb',
+        label: 'Revenue Generated'
+      },
+      {
+        icon: 'bx-cart',
+        color: 'danger',
+        value: '36%',
+        label: 'Quarterly Sales'
+      },
+      {
+        icon: 'bx-shopping-bag',
+        color: 'warn',
+        value: '97.5k',
+        label: 'Orders Received'
+      }
+    ],
+    lineCards: [
+      {
+        icon: 'bx-chip',
+        color: 'primary',
+        value: '86%',
+        label: 'CPU Usage'
+      },
+      {
+        icon: 'bx-hdd',
+        color: 'success',
+        value: '1.2gb',
+        label: 'Memory Usage'
+      },
+      {
+        icon: 'bx-pulse',
+        color: 'danger',
+        value: '0.1%',
+        label: 'Downtime Ratio'
       }
     ]
   })

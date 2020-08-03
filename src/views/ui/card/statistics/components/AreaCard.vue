@@ -1,22 +1,41 @@
 <template>
   <mg-card noBodyPadding>
     <div class="header-wrapper">
-      <span class="icon-container">
-        <svg-icon class="icon" icon-class="vue" class-name="vue" />
+      <span class="icon-bg">
+        <svg-icon :icon-class="icon" class-name="icon" />
       </span>
-      <h2>92.6k</h2>
-      <span>Subscribers Gained</span>
+      <h2>{{ value }}</h2>
+      <span>{{ label }}</span>
     </div>
-    <apex-chart type="area" height="100" :options="chartOptions" :series="series"></apex-chart>
+    <div style="width: 100%">
+      <apex-chart ref="chart" type="area" height="100" :options="chartOptions" :series="series"></apex-chart>
+    </div>
   </mg-card>
 </template>
 
 <script>
 import VueApexCharts from 'vue-apexcharts'
+import { setColor } from '@/utils/vuesax'
 export default {
   name: 'AreaCard',
   components: {
     ApexChart: VueApexCharts
+  },
+  props: {
+    icon: {
+      type: String,
+      required: true
+    },
+    color: {
+      type: String,
+      default: 'primary'
+    },
+    value: {
+      type: String
+    },
+    label: {
+      type: String
+    }
   },
   data() {
     return {
@@ -28,7 +47,7 @@ export default {
       ],
       chartOptions: {
         chart: {
-          height: 350,
+          height: 100,
           type: 'area',
           toolbar: {
             show: false // 关闭工具栏
@@ -67,6 +86,30 @@ export default {
         }
       }
     }
+  },
+  mounted() {
+    let newColor = setColor('color', this.color, this.$el, true)
+    this.chartOptions.colors = [`rgba(${newColor}, 1)`]
+    // Apex Charts dont resize properly, it may caused by flex. Use nextTick to avoid.
+    this.$nextTick(() => {
+      this.$refs.chart.updateOptions(this.chartOptions)
+    })
+  },
+  updated() {
+    let newColor = setColor('color', this.color, this.$el, true)
+    this.chartOptions.colors = [`rgba(${newColor}, 1)`]
+    this.$nextTick(() => {
+      this.$refs.chart.updateOptions(this.chartOptions)
+    })
+  },
+  watch: {
+    color() {
+      let newColor = setColor('color', this.color, this.$el, true)
+      this.chartOptions.colors = [`rgba(${newColor}, 1)`]
+      this.$nextTick(() => {
+        this.$refs.chart.updateOptions(this.chartOptions)
+      })
+    }
   }
 }
 </script>
@@ -78,18 +121,19 @@ export default {
   align-items: flex-start;
   padding: 21px 21px 0;
 
-  .icon-container {
-    padding: 0.75rem;
+  .icon-bg {
+    padding: 0.6rem;
     margin-bottom: 1rem;
-    width: 45px;
-    height: 45px;
-    border-radius: 45px;
-    background: rgba(30, 30, 30, 0.15);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 3rem;
+    background: rgba(var(--vs-color), 0.15);
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
 
     .icon {
-      color: #1e1e1e;
       width: 100%;
       height: 100%;
+      color: rgba(var(--vs-color), 1);
     }
   }
 

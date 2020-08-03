@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { setColor } from '@/utils'
+import { setColor } from '@/utils/vuesax'
 export default {
   name: 'CubeCard',
   props: {
@@ -76,7 +76,6 @@ export default {
   }
 
   span {
-    font-size: 0.85rem;
     color: #626262;
   }
 }
