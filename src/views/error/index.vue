@@ -33,25 +33,25 @@ export default {
           title: '404 - Page Not Found!',
           info:
             'paraphonic unassessable foramination Caulopteris worral Spirophyton encrimson esparcet aggerate chondrule restate whistler shallopy biosystematy area bertram plotting unstarting quarterstaff.',
-          img: require('./../../assets/404.png')
+          img: require('./../../assets/error-img.png')
         },
         500: {
           title: 'Internal Server Error!',
           info:
             'susceptive nonturbinated indoctrination formulary dyskinetic deafforest Strumella frolicsomeness encrustment portia myelination lachrymatory bestain hoople piscator pyramidoidal parter clipt.',
-          img: require('./../../assets/500.png')
+          img: require('./../../assets/error-img.png')
         },
         Maintenance: {
           title: 'Under Maintenance!',
           info:
             'paraphonic unassessable foramination Caulopteris worral Spirophyton encrimson esparcet aggerate chondrule restate whistler shallopy biosystematy area bertram plotting unstarting quarterstaff.',
-          img: require('./../../assets/Maintenance.png')
+          img: require('./../../assets/error-img.png')
         },
         NotAuthorized: {
           title: 'You are not authorized!',
           info:
             'paraphonic unassessable foramination Caulopteris worral Spirophyton encrimson esparcet aggerate chondrule restate whistler shallopy biosystematy area bertram plotting unstarting quarterstaff.',
-          img: require('./../../assets/NotAuthorized.png')
+          img: require('./../../assets/error-img.png')
         }
       },
       errorCode: 404
@@ -67,7 +67,7 @@ export default {
 .index {
   height: 100%;
   width: 100%;
-  background: url('./../../assets/errorPage.jpg') no-repeat center;
+  background: url('./../../assets/errorPage.png') no-repeat center;
   background-size: cover;
   .wrapper {
     height: 100%;

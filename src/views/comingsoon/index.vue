@@ -4,11 +4,32 @@
       <div class="box">
         <h1 class="title">We are launching soon</h1>
         <img src="./../../assets/rocket.png" alt="rocket" />
-        <div>time</div>
+        <div class="time-wrapper">
+          <countdown :time="new Date('03/09/2021 00:00:00').getTime() - new Date().getTime()">
+            <template slot-scope="props">
+              <div class="item-item">
+                <span class="timer">{{ props.days }}</span>
+                <span>Days</span>
+              </div>
+              <div class="item-item">
+                <span class="timer">{{ props.hours }}</span>
+                <span>Hours</span>
+              </div>
+              <div class="item-item">
+                <span class="timer">{{ props.minutes }}</span>
+                <span>Minutes</span>
+              </div>
+              <div class="item-item">
+                <span class="timer">{{ props.seconds }}</span>
+                <span>Seconds</span>
+              </div>
+            </template>
+          </countdown>
+        </div>
         <div class="line"><span />Subscribe<span /></div>
         <div class="info">If you would like to be notified when our app is live, Please subscribe to our mailing list.</div>
         <div class="input">
-          <vs-input v-model="email" placeholder="email" />
+          <vs-input v-model="email" placeholder="email" block />
         </div>
         <vs-button class="btn" @click="handleSubmit">Subscribe</vs-button>
       </div>
@@ -17,8 +38,12 @@
 </template>
 
 <script>
+import VueCountdown from '@chenfengyuan/vue-countdown'
 export default {
   name: 'index',
+  components: {
+    countdown: VueCountdown
+  },
   data() {
     return {
       email: ''
@@ -36,8 +61,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('./../../assets/errorPage.png') no-repeat center;
+  background-size: cover;
   .box {
     width: 60vw;
+    max-width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +75,22 @@ export default {
     }
     img {
       width: 16vw;
+    }
+    .time-wrapper {
+      width: 100%;
+      & > span {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        .item-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .timer {
+            font-size: 36px;
+          }
+        }
+      }
     }
     .line {
       width: 100%;
@@ -78,8 +122,5 @@ export default {
       width: 100%;
     }
   }
-}
->>> .vs-input-content.vs-input {
-  width: 100%;
 }
 </style>
