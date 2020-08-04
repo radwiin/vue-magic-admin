@@ -64,7 +64,17 @@ export default {
           show: false
         },
         stroke: {
-          curve: 'smooth'
+          curve: 'smooth',
+          width: 2.5
+        },
+        fill: {
+          type: 'gradient',
+          gradient: {
+            shadeIntensity: 0.9,
+            opacityFrom: 0.7,
+            opacityTo: 0.5,
+            stops: [0, 80, 100]
+          }
         },
         xaxis: {
           type: 'datetime',

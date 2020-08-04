@@ -37,34 +37,34 @@ const routes = [
     meta: { title: 'Login', hidden: true, noToken: true }
   },
   {
+    name: 'not-authorized',
+    path: '/not-authorized',
+    component: () => import('@/views/pages/miscellaneous/error'),
+    meta: { title: 'Not Authorized', hidden: true, noToken: true }
+  },
+  {
+    name: 'maintenance',
+    path: '/maintenance',
+    component: () => import('@/views/pages/miscellaneous/error'),
+    meta: { title: 'Maintenance', hidden: true, noToken: true }
+  },
+  {
+    name: 'coming-soon',
+    path: '/coming-soon',
+    component: () => import('@/views/pages/miscellaneous/comingsoon'),
+    meta: { title: 'Coming Soon', hidden: true, noToken: true }
+  },
+  {
     name: '404',
     path: '/404',
-    component: () => import('@/views/error'),
+    component: () => import('@/views/pages/miscellaneous/error'),
     meta: { title: '404', hidden: true, noToken: true }
   },
   {
     name: '500',
     path: '/500',
-    component: () => import('@/views/error'),
+    component: () => import('@/views/pages/miscellaneous/error'),
     meta: { title: '500', hidden: true, noToken: true }
-  },
-  {
-    name: 'Maintenance',
-    path: '/Maintenance',
-    component: () => import('@/views/error'),
-    meta: { title: 'Maintenance', hidden: true, noToken: true }
-  },
-  {
-    name: 'NotAuthorized',
-    path: '/NotAuthorized',
-    component: () => import('@/views/error'),
-    meta: { title: 'NotAuthorized', hidden: true, noToken: true }
-  },
-  {
-    name: 'comingsoon',
-    path: '/comingsoon',
-    component: () => import('@/views/comingsoon'),
-    meta: { title: 'comingsoon', hidden: true, noToken: true }
   },
   {
     name: '/',
@@ -77,6 +77,40 @@ const routes = [
         path: '/home',
         component: () => import('@/views/home'),
         meta: { title: 'Home', icon: 'bx bx-home' }
+      }
+    ]
+  },
+  {
+    name: 'miscellaneous',
+    path: '/miscellaneous',
+    component: Layout,
+    redirect: '/miscellaneous/not-authorized',
+    meta: { title: 'Miscellaneous', icon: 'bx bx-coffee', alwaysShow: true },
+    children: [
+      {
+        name: 'miscellaneous-not-authorized',
+        path: window.location.origin + '/#' + '/not-authorized',
+        meta: { title: 'Not Authorized', icon: 'bx bx-hash' }
+      },
+      {
+        name: 'miscellaneous-maintenance',
+        path: window.location.origin + '/#' + '/maintenance',
+        meta: { title: 'Maintenance', icon: 'bx bx-hash' }
+      },
+      {
+        name: 'miscellaneous-coming-soon',
+        path: window.location.origin + '/#' + '/coming-soon',
+        meta: { title: 'Coming Soon', icon: 'bx bx-hash' }
+      },
+      {
+        name: 'miscellaneous-404',
+        path: window.location.origin + '/#' + '/404',
+        meta: { title: '404', icon: 'bx bx-hash' }
+      },
+      {
+        name: 'miscellaneous-500',
+        path: window.location.origin + '/#' + '/500',
+        meta: { title: '500', icon: 'bx bx-hash' }
       }
     ]
   }

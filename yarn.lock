@@ -830,6 +830,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@chenfengyuan/vue-countdown@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.npm.taobao.org/@chenfengyuan/vue-countdown/download/@chenfengyuan/vue-countdown-1.1.5.tgz#33c1fe68bd28496cb70dda8eed6ecc874a6dc386"
+  integrity sha1-M8H+aL0oSWy3DdqO7W7Mh0ptw4Y=
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"

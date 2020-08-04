@@ -3,7 +3,7 @@
     <mg-card>
       <div class="box">
         <h1 class="title">We are launching soon</h1>
-        <img src="./../../assets/rocket.png" alt="rocket" />
+        <img src="@/assets/rocket.png" alt="rocket" />
         <div class="time-wrapper">
           <countdown :time="new Date('03/09/2021 00:00:00').getTime() - new Date().getTime()">
             <template slot-scope="props">
@@ -61,8 +61,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url('./../../assets/errorPage.png') no-repeat center;
-  background-size: cover;
+  background: url('~@/assets/errorPage.png') center center/cover;
   .box {
     width: 60vw;
     max-width: 700px;

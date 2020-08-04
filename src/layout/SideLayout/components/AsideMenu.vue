@@ -26,6 +26,7 @@
 import AutoVsSidebar from './AutoVsSidebar'
 import { mapGetters } from 'vuex'
 import _ from 'lodash'
+import { isExternal } from '@/utils/validate'
 export default {
   name: 'AsideMenu',
   components: {
@@ -59,7 +60,7 @@ export default {
       }
       // 以下是对要显示的路由进行的逻辑处理，暂不支持外链
       if (hasVisibleChildren && (!hasOnlyOneVisibleChildren || isAlwaysShow)) {
-        // 存在可见子节点，且要么有一个以上的子节点，要么只有一个子节点但设置alwaysShow属性。此时渲染为el-submenu
+        // 存在可见子节点，且要么有一个以上的子节点，要么只有一个子节点但设置alwaysShow属性。此时渲染为submenu
         return {
           icon: route.meta.icon,
           text: route.meta.title,
@@ -73,10 +74,11 @@ export default {
         const theOnlyOneVisibleChild = _.cloneDeep(visibleChildren[0])
         return this.toMenu(theOnlyOneVisibleChild)
       } else {
-        // 不存在可见子节点。此时渲染为el-menu-item
+        // 不存在可见子节点。此时渲染为menu-item
         return {
           id: route.name,
-          to: route.path,
+          to: isExternal(route.path) ? undefined : route.path,
+          href: isExternal(route.path) ? route.path : undefined,
           icon: route.meta.icon,
           text: route.meta.title
         }
