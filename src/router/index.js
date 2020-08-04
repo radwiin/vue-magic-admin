@@ -81,34 +81,6 @@ const routes = [
         meta: { title: 'Home', icon: 'bx bx-home' }
       }
     ]
-  },
-  {
-    path: '/miscellaneous',
-    component: Layout,
-    redirect: '/miscellaneous/not-authorized',
-    meta: { title: 'Miscellaneous', icon: 'bx bx-coffee', alwaysShow: true },
-    children: [
-      {
-        path: '/not-authorized',
-        meta: { title: 'Not Authorized', icon: 'bx bx-hash', link: true }
-      },
-      {
-        path: '/maintenance',
-        meta: { title: 'Maintenance', icon: 'bx bx-hash', link: true }
-      },
-      {
-        path: '/coming-soon',
-        meta: { title: 'Coming Soon', icon: 'bx bx-hash', link: true }
-      },
-      {
-        path: '/404',
-        meta: { title: '404', icon: 'bx bx-hash', link: true }
-      },
-      {
-        path: '/500',
-        meta: { title: '500', icon: 'bx bx-hash', link: true }
-      }
-    ]
   }
 ]
 
