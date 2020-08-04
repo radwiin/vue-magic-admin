@@ -25,7 +25,6 @@
 <script>
 import AutoVsSidebar from './AutoVsSidebar'
 import { mapGetters } from 'vuex'
-import _ from 'lodash'
 import { isExternal } from '@/utils/validate'
 export default {
   name: 'AsideMenu',
@@ -48,9 +47,11 @@ export default {
       const checkHidden = it => it.meta && it.meta.hidden
       const checkAlwaysShow = it => it.meta && it.meta.alwaysShow
       const checkLeaf = it => !it.children
+      const checkLink = it => it.meta && it.meta.link
       const isHidden = checkHidden(route)
       const isAlwaysShow = checkAlwaysShow(route)
       const isLeaf = checkLeaf(route)
+      const isLink = checkLink(route)
       const visibleChildren = isLeaf ? [] : route.children.filter(child => !checkHidden(child))
       const hasVisibleChildren = visibleChildren.length > 0
       const hasOnlyOneVisibleChildren = visibleChildren.length === 1
@@ -64,21 +65,21 @@ export default {
         return {
           icon: route.meta.icon,
           text: route.meta.title,
-          children: route.children.map(child => {
-            const theChild = _.cloneDeep(child)
-            return this.toMenu(theChild)
-          })
+          children: route.children.map(this.toMenu)
         }
       } else if (hasVisibleChildren && hasOnlyOneVisibleChildren) {
         // 存在可见子节点，但只有一个节点且没有设置alwaysShow属性。此时默认将path传入子节点，且只渲染子节点
-        const theOnlyOneVisibleChild = _.cloneDeep(visibleChildren[0])
-        return this.toMenu(theOnlyOneVisibleChild)
+        return this.toMenu(visibleChildren[0])
       } else {
         // 不存在可见子节点。此时渲染为menu-item
+        let path = route.path
+        if (!isExternal(path) && isLink) {
+          path = `${window.location.origin}/#${path}`
+        }
         return {
           id: route.name,
-          to: isExternal(route.path) ? undefined : route.path,
-          href: isExternal(route.path) ? route.path : undefined,
+          to: isExternal(path) ? undefined : path,
+          href: isExternal(path) ? path : undefined,
           icon: route.meta.icon,
           text: route.meta.title
         }

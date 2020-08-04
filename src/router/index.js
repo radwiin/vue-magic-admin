@@ -26,6 +26,9 @@ Vue.use(VueRouter)
     noCache: false               if set true, the page will no be cached(default is false)
     roles: ['admin','editor']    control the page roles (you can set multiple roles)
     noToken: false               if set true, the page can be accessed directly without token(default is false)
+    link: false                  if set true, when item clicked in menu, will open a new page.
+                                 by the way, if path is an external link(like start with http...),
+                                 will also open a new page even link is false
   }
  */
 
@@ -86,24 +89,24 @@ const routes = [
     meta: { title: 'Miscellaneous', icon: 'bx bx-coffee', alwaysShow: true },
     children: [
       {
-        path: window.location.origin + '/#' + '/not-authorized',
-        meta: { title: 'Not Authorized', icon: 'bx bx-hash' }
+        path: '/not-authorized',
+        meta: { title: 'Not Authorized', icon: 'bx bx-hash', link: true }
       },
       {
-        path: window.location.origin + '/#' + '/maintenance',
-        meta: { title: 'Maintenance', icon: 'bx bx-hash' }
+        path: '/maintenance',
+        meta: { title: 'Maintenance', icon: 'bx bx-hash', link: true }
       },
       {
-        path: window.location.origin + '/#' + '/coming-soon',
-        meta: { title: 'Coming Soon', icon: 'bx bx-hash' }
+        path: '/coming-soon',
+        meta: { title: 'Coming Soon', icon: 'bx bx-hash', link: true }
       },
       {
-        path: window.location.origin + '/#' + '/404',
-        meta: { title: '404', icon: 'bx bx-hash' }
+        path: '/404',
+        meta: { title: '404', icon: 'bx bx-hash', link: true }
       },
       {
-        path: window.location.origin + '/#' + '/500',
-        meta: { title: '500', icon: 'bx bx-hash' }
+        path: '/500',
+        meta: { title: '500', icon: 'bx bx-hash', link: true }
       }
     ]
   }
