@@ -1,6 +1,5 @@
 const menus = [
   {
-    name: 'card',
     path: '/card',
     component: 'Layout',
     redirect: '/card/statistics',
@@ -21,7 +20,6 @@ const menus = [
     ]
   },
   {
-    name: 'extensions',
     path: '/extensions',
     component: 'Layout',
     redirect: '/extensions/quill-editor',
@@ -42,7 +40,6 @@ const menus = [
     ]
   },
   {
-    name: 'system',
     path: '/system',
     component: 'Layout',
     redirect: '/system/menu',
