@@ -74,7 +74,7 @@ export default {
         // 不存在可见子节点。此时渲染为menu-item
         let path = route.path
         if (!isExternal(path) && isLink) {
-          path = `${window.location.origin}/#${path}`
+          path = this.getFullPath(path)
         }
         return {
           id: route.name,
@@ -84,6 +84,27 @@ export default {
           text: route.meta.title
         }
       }
+    },
+    getFullPath(path) {
+      // Detail see: https://stackoverflow.com/questions/41036009/vue-1-x-2-x-get-vue-router-path-url-from-a-route-object
+      if (this.$router.mode === 'hash') {
+        if (this.$router.history.hashbang) {
+          path = '!' + path
+        }
+        path = '#' + path
+      }
+      // finally we add the absolute prefix before that
+      if (path[0] === '#') {
+        // hash mode join
+        path = location.origin + location.pathname + (location.query || '') + path
+      } else if (path[0] === '/') {
+        // absolute path
+        path = location.origin + path
+      } else {
+        // relative path
+        path = location.origin + location.pathname.replace(/\/[^\/]+$/, '/') + path // eslint-disable-line
+      }
+      return path
     }
   }
 }
