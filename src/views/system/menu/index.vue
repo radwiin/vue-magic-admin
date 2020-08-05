@@ -1,7 +1,5 @@
 <template>
-  <div>
-    menu
-  </div>
+  <page-container header="Menu"> </page-container>
 </template>
 
 <script>

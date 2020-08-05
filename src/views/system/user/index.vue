@@ -1,8 +1,10 @@
 <template>
-  <ps-container>
-    user
-    <div style="height:5000px;background:red"></div>
-  </ps-container>
+  <page-container>
+    <ps-container>
+      User
+      <div style="height:5000px;background:red"></div>
+    </ps-container>
+  </page-container>
 </template>
 
 <script>

@@ -7,7 +7,7 @@ import { Notification } from '@/utils/vuesax'
 NProgress.configure({ showSpinner: false })
 
 router.beforeEach(async (to, from, next) => {
-  document.title = to.meta.title // set page title
+  to.meta && to.meta.title && (document.title = to.meta.title) // set page title
   NProgress.start()
   const hasToken = store.getters.token // determine whether the user has logged in
   if (hasToken) {

@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="title">Statistics Card</div>
+  <page-container header="Statistics Card">
     <vs-row justify="space-between" style="margin: 0 -0.7rem;width:unset;">
       <vs-col v-for="(item, index) in cubeCards" :key="index" lg="2" sm="4" style="padding: 0 0.7rem 1.4rem">
         <cube-card v-bind="item" />
@@ -21,7 +20,7 @@
         <line-card v-bind="item" />
       </vs-col>
     </vs-row>
-  </div>
+  </page-container>
 </template>
 
 <script>
@@ -136,7 +135,7 @@ export default {
         label: 'CPU Usage'
       },
       {
-        icon: 'bx-hdd',
+        icon: 'bx-server',
         color: 'success',
         value: '1.2gb',
         label: 'Memory Usage'

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <page-container>
     <div style="margin: 0 0 10px 0">
       <mg-card style="width:400px" header="Title">
         <p style="margin: 0 0 0.6rem 0">
@@ -17,7 +17,7 @@
     <div style="margin: 10px 0">
       <weather-card style="width:400px"></weather-card>
     </div>
-  </div>
+  </page-container>
 </template>
 
 <script>

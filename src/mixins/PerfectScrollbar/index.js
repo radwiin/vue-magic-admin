@@ -14,12 +14,5 @@ export default {
     if (this.$_ps_container) {
       this.$_ps_instance = new PerfectScrollbar(this.$_ps_container)
     }
-  },
-  methods: {
-    $_ps_scrollTop(scroll = 0) {
-      if (this.$_ps_container) {
-        this.$_ps_container.scrollTop = scroll
-      }
-    }
   }
 }

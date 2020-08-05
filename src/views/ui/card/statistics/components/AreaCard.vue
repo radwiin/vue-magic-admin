@@ -126,10 +126,11 @@ export default {
 
 <style lang="scss" scoped>
 .header-wrapper {
+  padding: 1.5rem 1.5rem 0;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  padding: 21px 21px 0;
+  font-family: Montserrat, Helvetica, Arial, sans-serif;
 
   .icon-bg {
     padding: 0.6rem;
@@ -138,7 +139,6 @@ export default {
     height: 3rem;
     border-radius: 3rem;
     background: rgba(var(--vs-color), 0.15);
-    font-family: Montserrat, Helvetica, Arial, sans-serif;
 
     .icon {
       width: 100%;

@@ -1,13 +1,11 @@
 <template>
   <div class="layout">
     <aside-menu />
-    <div class="main">
+    <div class="page">
       <top-navbar></top-navbar>
-      <ps-container class="router-container" ref="router-container">
-        <transition name="fade-transform" mode="out-in">
-          <router-view />
-        </transition>
-      </ps-container>
+      <transition name="fade-transform" mode="out-in">
+        <router-view />
+      </transition>
     </div>
   </div>
 </template>
@@ -17,15 +15,7 @@ import AsideMenu from './components/AsideMenu'
 import TopNavbar from './components/TopNavbar'
 export default {
   name: 'SideLayout',
-  components: { AsideMenu, TopNavbar },
-  data: () => ({}),
-  watch: {
-    $route() {
-      if (this.$refs['router-container']) {
-        this.$refs['router-container'].$_ps_scrollTop()
-      }
-    }
-  }
+  components: { AsideMenu, TopNavbar }
 }
 </script>
 
@@ -34,14 +24,10 @@ export default {
   height: 100%;
   position: relative;
 
-  .main {
+  .page {
     height: 100%;
     margin-left: 50px;
     position: relative;
-
-    .router-container {
-      padding: 100px 30px 0;
-    }
   }
 }
 </style>

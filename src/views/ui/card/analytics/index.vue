@@ -1,5 +1,5 @@
 <template>
-  <div>analytics</div>
+  <page-container header="Analytics Card"> </page-container>
 </template>
 
 <script>
