@@ -9,9 +9,19 @@
     </template>
     <template #tbody>
       <vs-tr :key="i" v-for="(tr, i) in data">
-        <vs-td :key="i" v-for="(td, i) in column" :width="td.width"> {{ tr[td.prop] }} </vs-td>
+        <vs-td :key="i" v-for="(td, i) in column" :width="td.width">
+          <slot :name="td.prop" :row="tr">
+            {{ tr[td.prop] }}
+          </slot>
+        </vs-td>
         <template #expand v-if="tr.children">
-          <auto-vs-table :column="column" :data="tr.children" noHeader></auto-vs-table>
+          <auto-vs-table :column="column" :data="tr.children" noHeader>
+            <template v-for="col in column" #[col.prop]="slotProps">
+              <slot :name="col.prop" v-bind="slotProps">
+                {{ slotProps.row[col.prop] }}
+              </slot>
+            </template>
+          </auto-vs-table>
         </template>
       </vs-tr>
     </template>

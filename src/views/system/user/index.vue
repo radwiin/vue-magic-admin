@@ -1,6 +1,10 @@
 <template>
   <page-container header="User">
-    <auto-vs-table :column="column" :data="data"></auto-vs-table>
+    <auto-vs-table :column="column" :data="data">
+      <template #email="{ row }">
+        <span style="color:red">{{ row.email }}</span>
+      </template>
+    </auto-vs-table>
   </page-container>
 </template>
 
