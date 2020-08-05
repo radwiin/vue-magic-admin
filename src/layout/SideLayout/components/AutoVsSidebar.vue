@@ -1,5 +1,4 @@
 <script>
-import _ from 'lodash'
 export default {
   name: 'AutoVsSidebar',
   inheritAttrs: false,
