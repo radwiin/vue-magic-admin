@@ -42,13 +42,13 @@ const routes = [
   {
     name: 'not-authorized',
     path: '/not-authorized',
-    component: () => import('@/views/pages/miscellaneous/error'),
+    component: () => import('@/views/pages/miscellaneous/not-authorized'),
     meta: { title: 'Not Authorized', hidden: true, noToken: true }
   },
   {
     name: 'maintenance',
     path: '/maintenance',
-    component: () => import('@/views/pages/miscellaneous/error'),
+    component: () => import('@/views/pages/miscellaneous/maintenance'),
     meta: { title: 'Maintenance', hidden: true, noToken: true }
   },
   {
@@ -60,13 +60,13 @@ const routes = [
   {
     name: '404',
     path: '/404',
-    component: () => import('@/views/pages/miscellaneous/error'),
+    component: () => import('@/views/pages/miscellaneous/404'),
     meta: { title: '404', hidden: true, noToken: true }
   },
   {
     name: '500',
     path: '/500',
-    component: () => import('@/views/pages/miscellaneous/error'),
+    component: () => import('@/views/pages/miscellaneous/500'),
     meta: { title: '500', hidden: true, noToken: true }
   },
   {
