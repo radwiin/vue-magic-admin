@@ -28,6 +28,7 @@ export default {
     height: 100%;
     margin-left: 50px;
     position: relative;
+    overflow: hidden;
   }
 }
 </style>
