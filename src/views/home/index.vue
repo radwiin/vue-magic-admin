@@ -1,7 +1,7 @@
 <template>
   <page-container>
     <div style="margin: 0 0 10px 0">
-      <mg-card style="width:400px" header="Title">
+      <mg-card style="width:400px" title="Title">
         <p style="margin: 0 0 0.6rem 0">
           You can use title-color prop to change color of title of card. This prop supports hex, rgba, rgb and theme colors.
         </p>

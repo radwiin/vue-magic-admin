@@ -29,7 +29,7 @@ import RectCard from './components/RectCard'
 import AreaCard from './components/AreaCard'
 import LineCard from './components/LineCard'
 export default {
-  name: 'statistics',
+  name: 'statistics-card',
   components: {
     CubeCard,
     RectCard,
@@ -150,11 +150,3 @@ export default {
   })
 }
 </script>
-
-<style lang="scss" scoped>
-.title {
-  font-size: 1.8rem;
-  color: #636363;
-  margin-bottom: 1.2rem;
-}
-</style>

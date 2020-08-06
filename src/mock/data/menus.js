@@ -6,16 +6,22 @@ const menus = [
     meta: { title: 'Card', icon: 'bx bx-credit-card-front', alwaysShow: true },
     children: [
       {
-        name: 'statistics',
-        path: '/card/statistics',
-        component: '/ui/card/statistics',
-        meta: { title: 'Statistics', icon: 'bx bx-hash' }
+        name: 'basic-card',
+        path: '/card/basic-card',
+        component: '/ui/card/basic-card',
+        meta: { title: 'Basic Card', icon: 'bx bx-hash' }
       },
       {
-        name: 'analytics',
-        path: '/card/analytics',
-        component: '/ui/card/analytics',
-        meta: { title: 'Analytics', icon: 'bx bx-hash' }
+        name: 'statistics-card',
+        path: '/card/statistics-card',
+        component: '/ui/card/statistics-card',
+        meta: { title: 'Statistics Card', icon: 'bx bx-hash' }
+      },
+      {
+        name: 'analytics-card',
+        path: '/card/analytics-card',
+        component: '/ui/card/analytics-card',
+        meta: { title: 'Analytics Card', icon: 'bx bx-hash' }
       }
     ]
   },

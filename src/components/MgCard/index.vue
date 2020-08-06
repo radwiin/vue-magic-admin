@@ -1,9 +1,15 @@
 <template>
   <div class="mg-card" :class="`is-${shadow}-shadow`" :style="{ background: cardBackground }">
-    <div class="mg-card__header" v-if="$slots.header || header" :style="{ color: titleColor }">
-      <slot name="header">{{ header }}</slot>
+    <div class="mg-card__header" v-if="$slots.header || title">
+      <slot name="header">
+        <h4 :style="{ color: titleColor || (cardBackground && '#ffffff') }">{{ title }}</h4>
+        <h6 v-if="subtitle" :style="{ color: subtitleColor || (cardBackground && '#ffffff') }">{{ subtitle }}</h6>
+      </slot>
     </div>
-    <div :class="['mg-card__body', { 'no-padding': noBodyPadding }, bodyClass]" :style="bodyStyle">
+    <div
+      :class="['mg-card__body', { 'no-padding': noBodyPadding }, bodyClass]"
+      :style="{ color: contentColor || (cardBackground && '#ffffff'), ...bodyStyle }"
+    >
       <slot></slot>
     </div>
   </div>
@@ -13,29 +19,39 @@
 export default {
   name: 'MgCard',
   props: {
-    header: {},
+    title: {
+      type: String
+    },
+    subtitle: {
+      type: String
+    },
+    subtitleColor: {
+      type: String
+    },
+    titleColor: {
+      type: String
+    },
+    contentColor: {
+      type: String
+    },
     bodyClass: {
       type: String,
       default: ''
+    },
+    bodyStyle: {
+      // this prop may be unnecessary
+      type: Object
     },
     noBodyPadding: {
       type: Boolean,
       default: false
     },
-    bodyStyle: {},
     shadow: {
       type: String,
       default: 'always'
     },
-    titleColor: {
-      type: String
-    },
     cardBackground: {
       type: String
-    },
-    block: {
-      type: Boolean,
-      default: false
     }
   }
 }
@@ -64,6 +80,15 @@ export default {
     box-sizing: border-box;
     color: #2c2c2c;
     font-size: 1.2rem;
+
+    h4 {
+      font-size: 1.2rem;
+    }
+
+    h6 {
+      font-size: 0.875rem;
+      margin-top: 0.3rem;
+    }
   }
 
   &__body {

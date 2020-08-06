@@ -6,17 +6,23 @@
 *:before,
 *:after {
   box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-transform: none;
+  text-decoration: none;
 }
 
 html, body, #app {
   height: 100%;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   background: var(--vs-theme-bg);
   font-family: "Poppins", "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: .01rem;
 }
 
 ::-webkit-scrollbar {
@@ -53,4 +59,11 @@ a:hover {
 
 img {
   vertical-align: bottom;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #2c2c2c;
 }

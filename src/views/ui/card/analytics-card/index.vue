@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'analytics'
+  name: 'analytics-card'
 }
 </script>
 
