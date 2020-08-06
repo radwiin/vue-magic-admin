@@ -88,6 +88,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .auto-vs-table {
+  ::v-deep .vs-table__tr.isExpand:not(:first-of-type) + .vs-table__tr__expand td {
+    border-radius: 0px 0px 0px 0px !important;
+  }
   ::v-deep .vs-table__tr__expand {
     .vs-table__expand__td {
       background: none !important;
