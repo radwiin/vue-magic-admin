@@ -1,6 +1,6 @@
 <template>
   <vs-table v-bind="$attrs" v-on="$listeners" class="auto-vs-table">
-    <template #thead v-if="!noHeader">
+    <template #thead>
       <vs-tr>
         <vs-th :key="i" v-for="(th, i) in column" :width="th.width">
           {{ th.label }}
@@ -15,7 +15,7 @@
           </slot>
         </vs-td>
         <template #expand v-if="tr.children">
-          <auto-vs-table :column="column" :data="tr.children" noHeader>
+          <auto-vs-table :column="column" :data="tr.children">
             <template v-for="col in column" #[col.prop]="slotProps">
               <slot :name="col.prop" v-bind="slotProps"> </slot>
             </template>
@@ -31,10 +31,6 @@ export default {
   name: 'AutoVsTable',
   inheritAttrs: false,
   props: {
-    noHeader: {
-      type: Boolean,
-      default: false
-    },
     column: {
       type: Array,
       default: () => [
@@ -97,37 +93,50 @@ export default {
       background: none !important;
 
       &__content {
-        // height: unset !important;
+        height: unset !important;
 
         &__sub {
           padding: 0px;
 
-          .vs-table__tbody {
-            &::after {
-              content: '';
-              position: absolute;
-              left: 0px;
-              top: 0px;
-              background: rgba(var(--vs-color), 0.3);
-              width: 4px;
-              height: 100%;
-              opacity: 0;
-              -webkit-transition: all 0.25s ease;
-              transition: all 0.25s ease;
-              border-radius: 0px 10px 10px 0px;
-              z-index: 60;
-              transform: translate(0);
-              opacity: 1;
+          .vs-table {
+            &__thead {
+              .vs-table__th {
+                padding: 0px;
+
+                &__content {
+                  height: 0px;
+                  overflow: hidden;
+                }
+              }
             }
 
-            .vs-table__tr {
-              &:hover {
-                background: rgba(var(--vs-gray-1), 1) !important;
+            &__tbody {
+              &::after {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                background: rgba(var(--vs-color), 0.3);
+                width: 4px;
+                height: 100%;
+                opacity: 0;
+                -webkit-transition: all 0.25s ease;
+                transition: all 0.25s ease;
+                border-radius: 0px 10px 10px 0px;
+                z-index: 60;
+                transform: translate(0);
+                opacity: 1;
               }
 
-              .vs-table__td {
-                padding: 10px 12px;
-                background: rgba(var(--vs-bg), 0.1) !important;
+              .vs-table__tr {
+                &:hover {
+                  background: rgba(var(--vs-gray-1), 1) !important;
+                }
+
+                .vs-table__td {
+                  padding: 10px 12px;
+                  background: rgba(var(--vs-bg), 0.1) !important;
+                }
               }
             }
           }

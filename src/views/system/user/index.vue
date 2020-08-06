@@ -65,7 +65,19 @@ export default {
           {
             id: '5',
             name: 'name',
-            email: 'email'
+            email: 'email',
+            children: [
+              {
+                id: '4',
+                name: 'name',
+                email: 'email'
+              },
+              {
+                id: '5',
+                name: 'name',
+                email: 'email'
+              }
+            ]
           }
         ]
       }
