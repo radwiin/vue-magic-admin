@@ -1,8 +1,8 @@
 <template>
   <mg-card
     class="card-wrapper"
-    :cardBackground="`url(${require('@/assets/cloudy.jpg')}) center center/cover`"
-    :body-style="{ padding: '1.5rem', background: 'rgba(0,0,0,.6)' }"
+    :cardBackground="`linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${require('@/assets/cloudy.jpg')}) center center/cover`"
+    noBodyPadding
   >
     <div class="row-1">
       <h3>Cloudy</h3>
@@ -34,14 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-[class*='row-'] {
-  color: #fff;
-}
-
 .card-wrapper {
-  border-radius: 10px;
-  color: #fff;
-
   .row-1 {
     margin-top: 2rem;
     display: flex;
@@ -50,14 +43,14 @@ export default {
     align-items: center;
 
     h3 {
-      font-weight: 500;
-      line-height: 1.2;
       font-size: 1.5rem;
       margin: 0 0 0.5rem 0;
+      color: #fff;
     }
 
     p {
       margin: 0 0 1.5rem 0;
+      color: #fff;
     }
   }
 
@@ -74,7 +67,7 @@ export default {
 
     h2 {
       font-size: 3.5rem;
-      margin: 0;
+      color: #fff;
     }
   }
 

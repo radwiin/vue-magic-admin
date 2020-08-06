@@ -1,7 +1,7 @@
 <template>
   <page-container header="Basic Card">
-    <vs-row justify="space-between" style="margin: 0 -0.7rem; width:unset;">
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+    <vs-row justify="space-between" class="row">
+      <vs-col w="6" class="col">
         <mg-card>
           <p>
             The one minute. The soldier’s minute. In a battle, that’s all you get. One minute of everything at once. And anything before is nothing.
@@ -12,7 +12,7 @@
           </p>
         </mg-card>
       </vs-col>
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+      <vs-col w="6" class="col">
         <mg-card content-color="#ff9f43">
           <p>
             The one minute. The soldier’s minute. In a battle, that’s all you get. One minute of everything at once. And anything before is nothing.
@@ -24,8 +24,8 @@
         </mg-card>
       </vs-col>
     </vs-row>
-    <vs-row justify="space-between" style="margin: 0 -0.7rem; width:unset;">
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+    <vs-row justify="space-between" class="row">
+      <vs-col w="6" class="col">
         <mg-card title="Basic Card">
           <p>
             The one minute. The soldier’s minute. In a battle, that’s all you get. One minute of everything at once. And anything before is nothing.
@@ -36,7 +36,7 @@
           </p>
         </mg-card>
       </vs-col>
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+      <vs-col w="6" class="col">
         <mg-card title="Basic Card" title-color="#66c67c" content-color="#ff9f43">
           <p>
             The one minute. The soldier’s minute. In a battle, that’s all you get. One minute of everything at once. And anything before is nothing.
@@ -48,8 +48,8 @@
         </mg-card>
       </vs-col>
     </vs-row>
-    <vs-row justify="space-between" style="margin: 0 -0.7rem; width:unset;">
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+    <vs-row justify="space-between" class="row">
+      <vs-col w="6" class="col">
         <mg-card title="Basic Card" subtitle="Good taste is for people who can't afford sapphires.">
           <p>
             The one minute. The soldier’s minute. In a battle, that’s all you get. One minute of everything at once. And anything before is nothing.
@@ -60,7 +60,7 @@
           </p>
         </mg-card>
       </vs-col>
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+      <vs-col w="6" class="col">
         <mg-card
           title="Basic Card"
           title-color="#66c67c"
@@ -78,8 +78,8 @@
         </mg-card>
       </vs-col>
     </vs-row>
-    <vs-row justify="space-between" style="margin: 0 -0.7rem; width:unset;">
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+    <vs-row justify="space-between" class="row">
+      <vs-col w="6" class="col">
         <mg-card
           title="Basic Card"
           subtitle="Good taste is for people who can't afford sapphires."
@@ -95,7 +95,7 @@
           </p>
         </mg-card>
       </vs-col>
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+      <vs-col w="6" class="col">
         <mg-card
           title="Basic Card"
           subtitle="Good taste is for people who can't afford sapphires."
@@ -112,8 +112,8 @@
         </mg-card>
       </vs-col>
     </vs-row>
-    <vs-row justify="space-between" style="margin: 0 -0.7rem; width:unset;">
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+    <vs-row justify="space-between" class="row">
+      <vs-col w="6" class="col">
         <mg-card
           title="Basic Card"
           subtitle="Good taste is for people who can't afford sapphires."
@@ -128,7 +128,7 @@
           </p>
         </mg-card>
       </vs-col>
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+      <vs-col w="6" class="col">
         <mg-card
           title="Basic Card"
           subtitle="Good taste is for people who can't afford sapphires."
@@ -144,8 +144,8 @@
         </mg-card>
       </vs-col>
     </vs-row>
-    <vs-row justify="space-between" style="margin: 0 -0.7rem; width:unset;">
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+    <vs-row justify="space-between" class="row">
+      <vs-col w="6" class="col">
         <mg-card
           title="Basic Card"
           subtitle="Good taste is for people who can't afford sapphires."
@@ -162,7 +162,7 @@
           </p>
         </mg-card>
       </vs-col>
-      <vs-col w="6" style="padding: 0 0.7rem 1.4rem;">
+      <vs-col w="6" class="col">
         <mg-card
           title="Basic Card"
           subtitle="Good taste is for people who can't afford sapphires."
@@ -192,5 +192,14 @@ export default {
 <style lang="scss" scoped>
 p {
   margin-bottom: 0.75rem;
+}
+
+.row {
+  margin: 0 -0.7rem;
+  width: unset;
+
+  .col {
+    padding: 0 0.7rem 1.4rem;
+  }
 }
 </style>
