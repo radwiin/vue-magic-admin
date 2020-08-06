@@ -17,9 +17,7 @@
         <template #expand v-if="tr.children">
           <auto-vs-table :column="column" :data="tr.children" noHeader>
             <template v-for="col in column" #[col.prop]="slotProps">
-              <slot :name="col.prop" v-bind="slotProps">
-                {{ slotProps.row[col.prop] }}
-              </slot>
+              <slot :name="col.prop" v-bind="slotProps"> </slot>
             </template>
           </auto-vs-table>
         </template>
