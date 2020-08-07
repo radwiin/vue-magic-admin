@@ -87,13 +87,12 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+/* todo: fix the damage caused by vuesax selector `vs-table__tr__expand td` */
 .auto-vs-table {
-  ::v-deep .vs-table__tr.isExpand:not(:first-of-type) + .vs-table__tr__expand td {
-    border-radius: 0px 0px 0px 0px !important;
-  }
   ::v-deep .vs-table__tr__expand {
     .vs-table__expand__td {
       background: none !important;
+      border-radius: 0px 0px 15px 15px !important;
 
       &__content {
         height: unset !important;
@@ -108,7 +107,7 @@ export default {
 
                 &__content {
                   height: 0px;
-                  overflow: hidden;
+                  opacity: 0;
                 }
               }
             }
@@ -139,6 +138,7 @@ export default {
                 .vs-table__td {
                   padding: 10px 12px;
                   background: rgba(var(--vs-bg), 0.1) !important;
+                  border-radius: 0px 0px 0px 0px !important;
                 }
               }
             }

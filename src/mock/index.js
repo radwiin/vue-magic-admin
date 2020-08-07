@@ -5,3 +5,4 @@ Mock.setup({
 })
 
 import './app'
+import './system/menu'
